@@ -1,0 +1,99 @@
+
+.chat-main {
+  background-color: #ffffff;
+  height: 100vh;
+  width: calc(100% - 300px);
+  .main-header {
+    background-color: #ffffff;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__left-box {
+      margin-top: 35px;
+      &__now-group {
+        color: #333333;
+        margin-bottom: 15px;
+        font-size: 20px;
+        &__member-list {
+          color: #999999;
+          font-size: 12px;
+          display: flex;
+          &__member{
+            padding: 0 2px;
+          }
+        }
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      width: 72px;
+      margin-top: 28px;
+      padding: 0 20px;
+      line-height: 40px;
+      border: solid 1px #38aef0;
+      &__edit-btn{
+        color: #38aef0;
+        text-decoration: none;
+      }
+    }     
+  }
+  .message-list {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 35px 0 0 40px;
+    &__list__user{  
+      color: #333333;
+      font-size: 16px;
+      margin-bottom: 12px;
+      display: flex;   
+      li {
+        color: #999999;  
+        font-size: 12px;
+        padding-left: 5px;         
+      }
+    }
+    &__message {
+      color: #434A54;
+      margin-bottom: 46px;
+    }
+    
+  }
+  .form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    form { 
+      display: flex;
+      .input-box {
+        width: 100%;
+        display: flex;
+        position: relative;    
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+        }
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }     
+      }
+      .submit-btn{
+        background-color: #38aef0;
+        height: 50px;
+        width: 100px;
+        color: white;
+        margin-left: 15px;
+        padding: 0 30px;
+        cursor: pointer;
+      } 
+    }
+  }
+}
