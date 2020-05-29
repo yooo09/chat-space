@@ -14,7 +14,6 @@ class MessagesController < ApplicationController
 
     #保存に成功した場合
     if @message.save
-      # redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
       #非同期通信を実装
       respond_to do |format|
         format.json
