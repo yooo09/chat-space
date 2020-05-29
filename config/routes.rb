@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create, :edit, :update] do
     #メッセージのルーティングはグループにネストした形になっている
     #メッセージの保存を行う:create
-    resources :messages, only: [:index, :create,]
+    resources :messages, only: [:index, :create]
   end
 end

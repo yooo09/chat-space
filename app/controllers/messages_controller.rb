@@ -11,10 +11,16 @@ class MessagesController < ApplicationController
 
   def create
     @message = @group.messages.new(message_params)
+
     #保存に成功した場合
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
-    #保存に失敗した場合
+      # redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+      #非同期通信を実装
+      respond_to do |format|
+        format.json
+      end
+    
+      #保存に失敗した場合
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
